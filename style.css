@@ -24,6 +24,18 @@ body{
     z-index: 100;
 }
 
+.header-articles{
+    position: static;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
 .logo{
     position: relative;
     font-size: 25px;
@@ -170,6 +182,16 @@ body{
     padding-left: 150px;
 }
 
+.center-container {
+    width: 100%;
+    margin: 100px 0;
+}
+
+.center { 
+    text-align: center; 
+    padding-bottom: 10px;
+}
+
 .contact-content {
     display: flex;
     justify-content: space-between;
@@ -190,7 +212,6 @@ body{
 .contact-text h2 box-icon {
     margin-right: 10px;
 }
-
 
 .contact-form {
     width: 45%; 
@@ -353,7 +374,7 @@ ul
 
 .skill-set li
 {
-    background:rgba(0,0,0,.75);
+    background:orange;
     border-radius:5px;
     color:#FFF;
     display:inline-block;
@@ -365,7 +386,77 @@ ul
 
 .skill-set li:hover
 {
-    background:orange;
+    background:rgba(0,0,0,.75);
+}
+
+.episode {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    position: relative;
+}
+
+.episode__number {
+    font-size: 10vw;
+    font-weight: 600;
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    left: 100px;
+    text-align: center;
+    height: calc(10vw + 20px);
+    transition: all 0.2s ease-in;
+}
+
+.episode__content {
+    border-top: 2px solid #000000;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-gap: 10px;
+    padding: 15px 0;
+    margin: 0 auto;
+    max-width: 900px;
+}
+
+.episode__content .title {
+    font-weight: 600;
+    display: flex;
+    align-items: top;
+    margin-top: 4px;
+}
+
+.episode__content .title a {
+    text-decoration: none;
+    display: flex;
+    align-items: top;
+    color: #000000;
+  }
+
+.episode__content .title a:hover {
+    color: orange;
+}
+
+.episode__content .title a box-icon {
+    margin-right: 10px; 
+}
+
+.episode__content .story {
+  line-height: 26px;
+}
+
+.episode__content .story p{
+    text-align: justify;
+  }
+
+@media (max-width: 600px) {
+  .episode__content {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 576px) {
+  .episode__content .story {
+    font-size: 15px;
+  }
 }
 
 @media screen and (max-width: 48em) {
