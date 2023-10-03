@@ -182,9 +182,31 @@ body{
     padding-left: 150px;
 }
 
+.container-skills {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 120px;
+}
+
+.container-skills .center {
+    text-align: center;
+    padding-top: 20px;
+}
+
+.container-skills .center box-icon {
+    vertical-align: middle;
+}
+
 .center-container {
     width: 100%;
     margin: 100px 0;
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+    animation-delay: 0.6s;
 }
 
 .center { 
@@ -192,10 +214,45 @@ body{
     padding-bottom: 10px;
 }
 
+.card-category-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    width: 800px; /* Adjust as needed */
+    margin: 0 auto;
+}
+
+.card-category-grid a{
+    text-decoration: none;
+}
+
+.item {
+    background-size: cover;
+    background-position: center;
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    transition: filter 0.3s ease;
+}  
+
+.item:hover{
+    filter: brightness(70%);
+} 
+
 .contact-content {
     display: flex;
     justify-content: space-between;
     align-items: flex-start; 
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+    animation-delay: 0.6s;
 }
 
 .contact-text {
@@ -242,13 +299,6 @@ body{
 
 .contact-form button:hover {
     background-color: black;
-}
-
-.contact-text h2,
-.contact-text p {
-    opacity: 0;
-    animation: fadeIn 1s ease forwards;
-    animation-delay: 0.6s;
 }
 
 .footer {
@@ -445,7 +495,7 @@ ul
 
 .episode__content .story p{
     text-align: justify;
-  }
+}
 
 @media (max-width: 600px) {
   .episode__content {
