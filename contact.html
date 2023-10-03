@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <script src="script.js"></script>
+    <title>Contact</title>
+</head>
+<body>
+    <header class="header">
+        <a href="index.html" class="logo">Portfolio.</a>
+
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="skills.html">Skills</a>
+            <a href="articles.html">Articles</a>
+            <a href="contact.html" class="active">Contact</a>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="contact-content">
+            <div class="contact-text">
+                <h2><box-icon name='user-circle' type='solid' color='#000000' ></box-icon>Contact Me!</h2>
+                <p>Need to get in touch with me? Please go ahead and fill out the form with your inquiry.</p>
+            </div>
+            <form class="contact-form">
+                <input type="text" id="name" placeholder="Your Name" required>
+                <input type="email" id="email" placeholder="Your Email" required>
+                <input type="text" id="phone" placeholder="Your Phone Number" required>
+                <textarea id="message" rows="4" placeholder="How can I help you?"></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2023 Muhammad Akmal Firmansyah. All rights reserved.</p>
+    </footer>
+</body>
+</html>
