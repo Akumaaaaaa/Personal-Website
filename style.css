@@ -88,7 +88,7 @@ body{
 .home-sci{
     position: absolute;
     bottom: 175px;
-    width: 120px;
+    width: 190px;
     display: flex;
     justify-content: space-between;
 }
@@ -221,6 +221,13 @@ body{
 
 .contact-form button:hover {
     background-color: black;
+}
+
+.contact-text h2,
+.contact-text p {
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+    animation-delay: 0.6s;
 }
 
 .footer {

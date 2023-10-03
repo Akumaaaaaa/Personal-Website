@@ -24,19 +24,34 @@
     <div class="container">
         <div class="contact-content">
             <div class="contact-text">
+                <div class="divider"></div>
                 <h2><box-icon name='user-circle' type='solid' color='#000000' ></box-icon>Contact Me!</h2>
                 <p>Need to get in touch with me? Please go ahead and fill out the form with your inquiry.</p>
             </div>
-            <form class="contact-form">
+            <form class="contact-form" onsubmit="sendEmail(); reset(); return false;">
                 <input type="text" id="name" placeholder="Your Name" required>
-                <input type="email" id="email" placeholder="Your Email" required>
                 <input type="text" id="phone" placeholder="Your Phone Number" required>
                 <textarea id="message" rows="4" placeholder="How can I help you?"></textarea>
                 <button type="submit">Submit</button>
             </form>
         </div>
+        <script src="https://smtpjs.com/v3/smtp.js"></script>
+        <script>
+            function sendEmail(){
+                Email.send({
+                SecureToken : "93570682-5d3c-421c-82a4-3b43c6cf8c0d",
+                To : 'richardflint35@gmail.com',
+                From : 'richardflint35@gmail.com',
+                Subject : "New Contact Form Enquiry",
+                Body : "Name: " + document.getElementById("name").value 
+                + "<br> Phone No: " + document.getElementById("phone").value
+                + "<br> Message: " + document.getElementById("message").value
+            }).then(
+            message => alert("Message Sent Successfully")
+            );
+            }
+        </script>
     </div>
-
     <footer class="footer">
         <p>&copy; 2023 Muhammad Akmal Firmansyah. All rights reserved.</p>
     </footer>
