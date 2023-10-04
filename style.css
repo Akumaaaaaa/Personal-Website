@@ -105,6 +105,12 @@ body{
     justify-content: space-between;
 }
 
+.home-sci-center {
+  display: none;
+  justify-content: center;
+  margin-top: 20px;
+}
+
 .home-sci a {
     position: relative;
     display: inline-flex;
@@ -540,6 +546,10 @@ ul
     background-color: #f8f5f2;
   }
 
+  .footer{
+    font-size: 10px;
+  }
+
   .navbar {
     display: none; 
     flex-direction: column;
@@ -647,7 +657,7 @@ ul
   }
 
   .contact-text h2 box-icon {
-    margin-left: 25px;
+    margin-left: 35px;
     display: inline-flex;
   }
 
@@ -701,10 +711,17 @@ ul
   }
 
   .home-sci {
+    display: none;
+ }
+
+ .home-sci-center {
+    display: flex;
     justify-content: center;
-    margin-top: 20px;
-    margin-left: 90px;
-    justify-content: space-between;
+    margin-top: -100px;
+    height: 100px;
+    width: 100%;
+    font-size: 30px;
+    padding: 10px;
  }
 
   .circular--landscape {
