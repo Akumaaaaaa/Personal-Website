@@ -11,6 +11,7 @@
 </head>
 <body>
     <header class="header">
+        <div class="menu-icon">&#9776;</div>
         <a href="index.html" class="logo">Portfolio.</a>
 
         <nav class="navbar">
@@ -24,6 +25,7 @@
 
     <section class="home">
         <div class="home-content">
+            <div class="circular--landscape-mobile"> <img src="Assets/akmal.JPG" /></div>
             <h1>Hello!, I'm Akmal</h1>
             <h3>Fullstack Developer</h3>
             <p>An Informatics enthusiast with a keen interest in developing Android and web applications. I love embracing new challenges as they allow me to constantly evolve and refine my skills. With a strong ability to learn quickly and excellent interpersonal skills, I work with integrity and thrive even under pressure, whether as part of a team or tackling individual projects.</p>
@@ -37,5 +39,18 @@
         
         <div class="circular--landscape"> <img src="Assets/akmal.JPG" /></div>
     </section>
+    <div class="overlay"></div>  
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+        const menuIcon = document.querySelector('.menu-icon');
+        const navbar = document.querySelector('.navbar');
+        const overlay = document.querySelector('.overlay');
+
+        menuIcon.addEventListener('click', function () {
+            navbar.classList.toggle('active');
+            overlay.classList.toggle('active');
+        });
+    });
+    </script>
 </body>
 </html>

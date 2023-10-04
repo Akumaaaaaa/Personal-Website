@@ -11,6 +11,7 @@
 </head>
 <body>
     <header class="header-articles">
+        <div class="menu-icon">&#9776;</div>
         <a href="index.html" class="logo">Portfolio.</a>
 
         <nav class="navbar">
@@ -145,5 +146,18 @@
           </div>
         </article>
     </div>
+    <div class="overlay"></div>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const menuIcon = document.querySelector('.menu-icon');
+        const navbar = document.querySelector('.navbar');
+        const overlay = document.querySelector('.overlay');
+
+        menuIcon.addEventListener('click', function () {
+            navbar.classList.toggle('active');
+            overlay.classList.toggle('active');
+        });
+    });
+    </script>
 </body>
 </html>
