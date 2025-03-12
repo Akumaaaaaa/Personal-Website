@@ -209,6 +209,16 @@ body {
     padding-left: 150px;
 }
 
+.container-about {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-top: 200px;
+}
+
 .container-skills {
     display: flex;
     flex-direction: column;
@@ -276,16 +286,21 @@ body {
 
 .contact-content {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
     opacity: 0;
+    gap: 50px;
+    padding: 20px;
     animation: fadeIn 1s ease forwards;
     animation-delay: 0.6s;
 }
 
 .contact-text {
-    margin-top: 0px;
-    width: 40%;
+    width: 85%;
+    max-width: 1000px;
+    margin-bottom: 150px;
 }
 
 .contact-text h2 {
@@ -301,24 +316,25 @@ body {
 }
 
 .contact-form {
-    width: 45%;
+    width: 100%;
+    max-width: 1000px;
 }
 
 .contact-form textarea {
-    width: 80%;
+    width: 100%;
     padding: 10px;
     margin-bottom: 10px;
     resize: vertical;
 }
 
 .contact-form input {
-    width: 80%;
+    width: 100%;
     padding: 10px;
     margin-bottom: 10px;
 }
 
 .contact-form button {
-    width: 80%;
+    width: 100%;
     padding: 10px;
     background-color: orange;
     border: none;
@@ -637,12 +653,21 @@ ul {
     }
 
     .container {
-        height: 100%;
+        height: auto;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         padding: 20px;
+    }
+
+    .container-about {
+        height: 1px ;
+        padding-top: 250px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
 
     .contact-content {
@@ -653,13 +678,15 @@ ul {
         height: auto;
         max-width: 800px;
         margin: 0 auto;
-        padding: 20px 0;
+        gap: 30px;
+        padding: 10px;
     }
 
     .contact-text {
         margin-bottom: 20px;
         text-align: center;
-        width: 80%;
+        width: 100%;
+        max-width: 500px;
     }
 
     .contact-text h2 {
@@ -676,12 +703,12 @@ ul {
     }
 
     .contact-text p {
-        font-size: 10px;
+        font-size: 12px;
     }
 
     .contact-form {
         width: 100%;
-        max-width: 350px;
+        max-width: 100%;
         text-align: center;
     }
 
