@@ -11,11 +11,11 @@
     <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAZZJREFUSEvlln1ygyAQxd/2JPYkTU5SPUntSTQnqTlJPEmoC0RBgYUy00ynzDj5w8BvPx5vJTxp0ZO4+LtgNaAFMPNDnf7NWtUZqxFKkwg9veMzi6r/XrHUgAaE2++DL/hY8u01WOFMHabcPOoy3sAztXjNhZrOVCw14gvAaXkmanEuOUoEqwEnvOBtL5xYf9WIYSn7lTqMqUCSYCejg2p1QKQzXvurrxZheIgNd1xiVywIttnwAVxGXjMUOlc8yhEWMY75Jhje19h9k913uN8HsJeJ2R3sn1MNT1g2aK7EA85Bs+I9uAfOhersBOPQvYZ2NbNMxda+r2CvP8K9zDUO2w6Gm+wdeArsRegq1O1vyjgOFXRs1S+1EcwWIaEPKdMBR43DuxGBCsbElVRmyjhybkTUuVLKTPW3RJySgWzKtMIIGccqXHdoCDYqWyYfxqZuZ23IOA7Cu2vLTE4qEbz325hxlAyIaI9Th0jGkRtAUca5xpEDLwNXfHHsg/kpuPiLowq8jj6gkQa9VO6ijKXDSt7/P/A3S/TkH+n2ZyEAAAAASUVORK5CYII=">
 </head>
 <body>
-    <header class="header">
-        <div class="menu-icon">&#9776;</div>
+    <header class="header-homepage">
+        <div class="menu-icon-homepage">&#9776;</div>
         <a href="index.html" class="logo">Portfolio.</a>
 
-        <nav class="navbar">
+        <nav class="navbar-homepage">
             <a href="index.html" class="active">Home</a>
             <a href="about.html">About</a>
             <a href="skills.html">Skills</a>
@@ -40,12 +40,12 @@
         
         <div class="circular--landscape"> <img src="Assets/akmal.JPG" /></div>
     </section>
-    <div class="overlay"></div>  
+    <div class="overlay-homepage"></div>  
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-        const menuIcon = document.querySelector('.menu-icon');
-        const navbar = document.querySelector('.navbar');
-        const overlay = document.querySelector('.overlay');
+        const menuIcon = document.querySelector('.menu-icon-homepage');
+        const navbar = document.querySelector('.navbar-homepage');
+        const overlay = document.querySelector('.overlay-homepage');
 
         menuIcon.addEventListener('click', function () {
             navbar.classList.toggle('active');
