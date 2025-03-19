@@ -320,6 +320,7 @@ body {
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;
+    font-size: 12px;
     resize: vertical;
 }
 
@@ -689,6 +690,7 @@ ul {
         width: 100%;
         padding: 10px;
         margin-bottom: 10px;
+        font-size: 12px;
         box-sizing: border-box;
     }
 
