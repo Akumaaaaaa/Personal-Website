@@ -17,4 +17,4 @@ Personal Website Repository for Technical Assignment Assignment - Skilvul
 |Muhammad Akmal Firmansyah|Informatics | [Linkedin](https://www.linkedin.com/in/akmal-firmansyah)
 
 ### Deploy Link:
-* [Vercel](https://personal-website-muhammad-akmal-firmansyah.vercel.app/)
+* [Vercel](https://personal-akmal.vercel.app/)
