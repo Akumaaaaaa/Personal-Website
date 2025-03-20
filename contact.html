@@ -37,20 +37,24 @@
                 <h2><box-icon name='user-circle' type='solid' color='#000000' ></box-icon>Contact Me!</h2>
                 <p>Need to get in touch with me? Please go ahead and fill out the form with your inquiry.</p>
             </div>
-            <form class="contact-form" onsubmit="return validateForm()">
-                <input type="text" id="name" placeholder="Your Name" required minlength="2" maxlength="50">
-                <input type="tel" id="phone" placeholder="Your Phone Number" required pattern="[0-9]{10,15}">
-                <textarea id="message" rows="4" placeholder="How can I help you?" required minlength="10" maxlength="500"></textarea>
+            <form class="contact-form" onsubmit="return validateForm(event)">
+                <input type="text" id="name" placeholder="Your Name">
+                <input type="tel" id="phone" placeholder="Your Phone Number">
+                <textarea id="message" rows="4" placeholder="How can I help you?"></textarea>
                 <button type="submit">Submit</button>
             </form>
         </div>
         <script src="https://smtpjs.com/v3/smtp.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
         <script>
-            function validateForm() {
+            function validateForm(event) {
+                event.preventDefault();
+
                 const name = document.getElementById('name').value.trim();
                 const phone = document.getElementById('phone').value.trim();
                 const message = document.getElementById('message').value.trim();
+
+                let isValid = true;
 
                 if (name.length < 2 || name.length > 50) {
                     Swal.fire({
@@ -58,7 +62,7 @@
                         title: 'Invalid Name',
                         text: 'Name must be between 2 and 50 characters.',
                     });
-                    return false;
+                    isValid = false;
                 }
 
                 const phonePattern = /^[0-9]{10,15}$/;
@@ -68,19 +72,22 @@
                         title: 'Invalid Phone Number',
                         text: 'Phone number must be 10-15 digits long and contain only numbers.',
                     });
-                    return false;
+                    isValid = false;
                 }
 
-                if (message.length < 10 || message.length > 500) {
+                if (message.length < 5 || message.length > 800) {
                     Swal.fire({
                         icon: 'error',
                         title: 'Invalid Message',
-                        text: 'Message must be between 10 and 500 characters.',
+                        text: 'Message must be between 5 and 800 characters.',
                     });
-                    return false;
+                    isValid = false;
                 }
 
-                sendEmail();
+                if (isValid) {
+                    sendEmail();
+                }
+
                 return false; 
             }
 
